@@ -9,8 +9,5 @@ spec:
     command:
     - cat
     tty: true
-    env:
-      - name: GCP_PROJECT
-        value: "core-workshop"
   securityContext:
     runAsUser: 0
