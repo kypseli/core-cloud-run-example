@@ -10,6 +10,8 @@ pipeline {
       steps {
         container('gcp-sdk'){
           sh 'gcloud beta run deploy bee-cd --image gcr.io/core-workshop/bee-cd:65 --allow-unauthenticated --platform managed --region us-east1'
+          sh 'gcloud beta run services describe bee-cd --platform managed --region us-east1'
+          sh 'gcloud beta run services delete bee-cd --platform managed --region us-east1'
         }
       }
     }
