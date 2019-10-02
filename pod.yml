@@ -2,6 +2,7 @@ kind: Pod
 metadata:
   name: gitops-pod
 spec:
+  serviceAccountName: kaniko
   containers:
   - name: gcp-sdk
     image: google/cloud-sdk:252.0.0-slim
@@ -12,4 +13,4 @@ spec:
       - name: GCP_PROJECT
         value: "core-workshop"
   securityContext:
-    runAsUser: 1000
+    runAsUser: 0
