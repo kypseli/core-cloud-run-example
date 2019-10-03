@@ -2,7 +2,6 @@ kind: Pod
 metadata:
   name: gitops-pod
 spec:
-  serviceAccountName: kaniko
   containers:
   - name: gcp-sdk
     image: google/cloud-sdk:252.0.0-slim
