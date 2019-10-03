@@ -1,7 +1,7 @@
 pipeline {
   agent {
     kubernetes {
-      cloud 'kaniko'
+      cloud 'cloud-run'
       label 'cloud-run'
       yamlFile 'pod.yml'
     }
