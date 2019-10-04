@@ -1,6 +1,7 @@
 kind: Pod
 metadata:
   name: gitops-pod
+  namespace: cloud-run
 spec:
   containers:
   - name: gcp-sdk
