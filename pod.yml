@@ -3,6 +3,7 @@ metadata:
   name: gitops-pod
   namespace: cloud-run
 spec:
+  serviceAccount: cloud-run
   containers:
   - name: gcp-sdk
     image: google/cloud-sdk:252.0.0-slim
