@@ -1,9 +1,7 @@
 kind: Pod
 metadata:
-  name: gitops-pod
-  namespace: cloud-run
+  name: cloud-run-pod
 spec:
-  serviceAccount: cloud-run
   containers:
   - name: gcp-sdk
     image: google/cloud-sdk:252.0.0-slim
@@ -17,4 +15,4 @@ spec:
   - name: gcp-logs
     emptyDir: {}
   securityContext:
-    runAsUser: 0
+    runAsUser: 1000
