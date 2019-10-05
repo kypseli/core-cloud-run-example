@@ -1,6 +1,7 @@
 pipeline {
   agent {
     kubernetes {
+      cloud 'cloud-run'
       label 'cloud-run'
       yamlFile 'pod.yml'
     }
