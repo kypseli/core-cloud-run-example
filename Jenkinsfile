@@ -6,6 +6,10 @@ pipeline {
       yamlFile 'pod.yml'
     }
   }
+  options { 
+    buildDiscarder(logRotator(numToKeepStr: '5'))
+    preserveStashes(buildCount: 5)
+  }
   stages {
     stage('Cloud Run Deploy') {
       steps {
