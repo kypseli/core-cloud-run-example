@@ -7,8 +7,8 @@ pipeline {
     }
   }
   options { 
-    buildDiscarder(logRotator(numToKeepStr: '5'))
-    preserveStashes(buildCount: 5)
+    buildDiscarder(logRotator(numToKeepStr: '4'))
+    preserveStashes(buildCount: 4)
   }
   stages {
     stage('Cloud Run Deploy') {
