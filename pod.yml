@@ -3,7 +3,6 @@ metadata:
   name: cloud-run-pod
   namespace: cloud-run
 spec:
-  serviceAccountName: cloud-run-sa
   containers:
   - name: gcp-sdk
     image: google/cloud-sdk:252.0.0-slim
